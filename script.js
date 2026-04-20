@@ -1,28 +1,31 @@
-let myName = "John"; 
-let myNumber = 42;
-let empty; 
-console.log(empty);             
-console.log(myNumber < 0);       
-console.log(myNumber > 0);      
-console.log(myName / myNumber);
-console.log(typeof myNumber);    
-console.log(typeof myName);      
-let totalPrice = Number(prompt("Введите сумму покупки ($):"));
-let discountPercent = 0;
+// 1 задание: 3 переменные
+let name = "Ali"; 
+let age = 14;     
+let nothing;      
+console.log(nothing);
+console.log(age < 10);
+console.log(age > 10);
+console.log(name / age);
+console.log(typeof age);
+console.log(typeof name);
+// --- ЗАДАНИЕ 2: Калькулятор скидок ---
 
-if (totalPrice < 100) {
-    discountPercent = 0;
-} else if (totalPrice >= 100 && totalPrice < 500) {
-    discountPercent = 5;
-} else if (totalPrice >= 500 && totalPrice <= 1000) {
-    discountPercent = 10;
-} else if (totalPrice > 1000) {
-    discountPercent = 15;
+let price = Number(prompt("Введите сумму покупки в $:"));
+let discount = 0;
+
+if (price < 100) {
+    discount = 0;
+} else if (price >= 100 && price < 500) {
+    discount = 5;
+} else if (price >= 500 && price <= 1000) {
+    discount = 10;
+} else if (price > 1000) {
+    discount = 15;
 }
-let discountValue = (totalPrice * discountPercent) / 100; 
-let finalAmount = totalPrice - discountValue;          
-console.log("--- Калькулятор скидок ---");
-console.log(`Сумма покупки: ${totalPrice}$`);
-console.log(`Скидка: ${discountPercent}%`);
-console.log(`Вы сэкономили: ${discountValue}$`);
-console.log(`Итоговая сумма к оплате: ${finalAmount}$`);
+
+let discountMoney = (price * discount) / 100;
+let finalPrice = price - discountMoney;
+
+console.log("Сумма покупки: " + price + "$");
+console.log("Скидка: " + discount + "%");
+console.log("Итого к оплате: " + finalPrice + "$");
